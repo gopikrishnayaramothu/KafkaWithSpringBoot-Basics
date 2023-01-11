@@ -10,10 +10,15 @@ Prerequisites :
 We have to start kafka in few terminal tabs to see how kafka messaging works 
 
 tab1(zookeeper) -> bin/zookeeper-server-start.sh config/zookeeper.properties
+
 tab2(kafka server) -> bin/kafka-server-start.sh config/server.properties
+
 tab3(producer1) -> bin/kafka-console-producer.sh --broker-list localhost:9092 --topic kafka_example
+
 tab4(consumer1) -> bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic kafka_example --from-beginning
+
 tab5(producer2) -> bin/kafka-console-producer.sh --broker-list localhost:9092 --topic kafka_example_json
+
 tab6(consumer2) -> bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic kafka_example_json --from-beginning
 
 We have used two producers and two consumers and we have configured the same in code base . When we run producer we can the message log in terminal or 
